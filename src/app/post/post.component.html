@@ -1,0 +1,49 @@
+<div>
+    <b><p style="text-transform: uppercase">{{post.autore}}</p></b>
+    <i><p>{{post.testo}}</p></i>
+</div>
+
+<div>
+    
+  <span class="d-inline-block" style="color: rgb(243, 40, 4);" (click)="addLike()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="fa fa-thumbs-up" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+      </svg>
+  </span>
+    
+    <p class="d-inline-block">{{post.like}}</p>
+    <button type="button" class="btn btn-primary position-relative float-end"  (click)="visualCreaComment()">
+      Commenti
+      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+        {{contaNumeroCommenti()}}
+        <span class="visually-hidden">unread messages</span>
+      </span>
+    </button>
+
+          <div *ngIf="show == true">
+            <ul *ngFor="let c of comm" >
+                <li>
+                  <app-comment [comment]="c"></app-comment>
+                </li>
+              </ul>
+              <div class="card-body">
+                <div class="container text-center">
+                <div>
+                  <b><label for="autore">AUTORE:</label><br></b>
+                  <input class="insAutore" name="Autore" #newautore>
+                </div>
+                <div>
+                  <b><label for="testo">TESTO:</label><br></b>
+                  <input  class="insTesto" name="Testo" #newtesto>
+                </div>
+                
+                
+                <button href='#' (click)="addCommento(newautore, newtesto, post.id)" class="btn btnInserimento btn-primary">
+                  Inserisci nuovo commento
+                </button>
+              </div>
+              </div>  
+          </div>  
+    <hr>
+</div>
+

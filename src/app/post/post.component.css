@@ -1,0 +1,18 @@
+.messaggio{
+    width: 1000px;
+}
+
+.formInserimento{
+    width:300px;
+    border-color: black;
+}
+
+.insAutore{
+    width:1000px; 
+    border-radius: 5px;
+}
+.insTesto{
+    width:1000px; 
+    border-radius: 5px;
+    height: 100px;
+}

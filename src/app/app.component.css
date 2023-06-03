@@ -1,0 +1,31 @@
+.top-bar {
+    background-color: #05349b;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 75px;
+    
+}
+.altezzaTesto{
+    height: 150px;
+}
+
+.formInserimento{
+    background-color: rgb(250, 250, 250);
+    width: 20rem;
+    height:250px;
+}
+.btnInserimento{
+    height:40px;
+    background-color: #05349b;
+    border-color: rgb(0, 0, 0);
+}
+
+.insAutore{
+    height: 25px;
+}
+.insTesto{
+    height: 100px;
+}
